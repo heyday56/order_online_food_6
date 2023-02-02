@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Change</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="fonts-6/css/bootstrap.min.css">
+</head>
+<body>
+<div id="change">
+	<form method="post" action="list.html" enctype="multipart/form-data">
+		<div class="form-group">
+			<label>Type Food Name*:</label>
+			<select class="form-control">
+				<option value="kabab">Kabab</option>
+				<option value="WhiteRice">White Rice</option>
+				<optionv value="pizza">Pizza</option>
+				<option value="manto">Manto</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<input type="file" name="changeFoodPhoto" required id="changeFoodPhoto" class="form-control-file">
+		</div>
+		<div class="form-group">
+			<label>Food Cost in AF*:</label>
+			<input type="number" name="foodCost" required class="form-control d-flex flex-column" id="changeFoodCost">
+		</div>
+		<div class="form-group">
+			<label>Food Category*:</label>
+			<select class="form-control"  name="changeFoodCategory">
+				<option value="Meat">Meat</option>
+				<option value="rice">Rice</option>
+				<option value="vegitable">Vegitable</option>
+			</select>
+		</div>
+		 <input type="submit" name="editSubmit" id="editSubmit" class="btn btn-success col-4" value="Edit" >
+		 <input type="submit" name="deleteSubmit" id="deleteSubmit" class="btn btn-danger col-4" value="Delete">
+	</form>
+	<label id="changeMsg" style="color: red;"></label>
+</div>
+<script type="text/javascript" src="script/javaScript.js"></script>
+<script type="text/javascript" src="fonts-6/js/bootstrap.min.js"></script>
+</body>
+</html>

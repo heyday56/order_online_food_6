@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Order</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="fonts-6/css/bootstrap.min.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div id="order" class="d-flex justify-content-between">
+	<div id="ordered" class="d-flex justify-content-center">
+	<form onsubmit="return orderValidate();">
+		<div class="form-group">
+			<label id="orderEmailMsg">Your Email*:</label>
+			<input type="email" name="orderEmail" class="form-control" required id="orderEmail">
+		</div>
+		<div class="form-group">
+			<label id="orderAddressMsg">Your Address*:</label>
+			<input type="address" name="orderAddress" required class="form-control" id="orderAddress">
+		</div>
+		<div class="form-group">
+			<label id="orderNameMsg">Food Name*:</label>
+			<input type="text" name="foodName" required class="form-control" id="foodName">
+		</div>
+		<div class="form-group">
+			<label id="orderDateMsg">What Date*:</label>
+			<input type="date" name="orderDate" required class="form-control" id="orderDate">
+		</div>
+		<div class="form-group">
+			<label id="orderTimeMsg">What time*:</label>
+			<input type="time" name="orderTime" required class="form-control" id="orderTime"> 
+		</div>
+		<div class="form-group">
+			<label id="orderAmountMsg">How Much*:</label>
+			<input type="text" name="amount" required class="form-control" id="orderAmount">
+		</div>
+		<input type="submit" name="orderSubmit" class="btn btn-success form-control" value="Order">
+	</form>
+	<label style="color: red;" id="orderMsg"></label>
+</div>
+<div id="foodMenu">
+	<div class="d-flex flex-column bg-white">
+		<img src="image/meal1.jpg" class="img-thumbnail
+		">
+		<h5>Food Name: Meat</h5>
+		<h5>Food Cost:160AF</h5>
+	</div>
+	<div class="d-flex flex-column bg-white">
+		<img src="image/meal2.jpg" class="img-thumbnail
+		">
+		<h5>Food Name: Meat</h5>
+		<h5>Food Cost:160AF</h5>
+	</div>
+	<div class="d-flex flex-column bg-white">
+		<img src="image/meal3.jpg" class="img-thumbnail
+		">
+		<h5>Food Name: Meat</h5>
+		<h5>Food Cost:160AF</h5>
+	</div>
+	<div class="d-flex flex-column bg-white">
+		<img src="image/meal4.jpg" class="img-thumbnail
+		">
+		<h5>Food Name: Meat</h5>
+		<h5>Food Cost:160AF</h5>
+	</div>
+	<div class="d-flex flex-column bg-white">
+		<img src="image/meal5.jpg" class="img-thumbnail
+		">
+		<h5>Food Name: Meat</h5>
+		<h5>Food Cost:160AF</h5>
+	</div>
+	<div class="d-flex flex-column bg-white">
+		<img src="image/meal6.jpg" class="img-thumbnail
+		">
+		<h5>Food Name: Meat</h5>
+		<h5>Food Cost:160AF</h5>
+	</div>
+	<div class="d-flex flex-column bg-white">
+		<img src="image/meal7.jpg" class="img-thumbnail
+		">
+		<h5>Food Name: Meat</h5>
+		<h5>Food Cost:160AF</h5>
+	</div>
+	<div class="d-flex flex-column bg-white">
+		<img src="image/meal8.jpg" class="img-thumbnail
+		">
+		<h5>Food Name: Meat</h5>
+		<h5>Food Cost:160AF</h5>
+	</div>
+	<div class="d-flex flex-column bg-white">
+		<img src="image/meal9.jpg" class="img-thumbnail
+		">
+		<h5>Food Name: Meat</h5>
+		<h5>Food Cost:160AF</h5>
+	</div>
+	<div class="d-flex flex-column bg-white">
+		<img src="image/meal10.jpg" class="img-thumbnail
+		">
+		<h5>Food Name: Meat</h5>
+		<h5>Food Cost:160AF</h5>
+	</div>
+	<div class="d-flex flex-column bg-white">
+		<img src="image/meal11.jpg" class="img-thumbnail
+		">
+		<h5>Food Name: Meat</h5>
+		<h5>Food Cost:160AF</h5>
+	</div>
+	<div class="d-flex flex-column bg-white">
+		<img src="image/meal12.jpg" class="img-thumbnail
+		">
+		<h5>Food Name: Meat</h5>
+		<h5>Food Cost:160AF</h5>
+	</div>
+	<div class="d-flex flex-column bg-white">
+		<img src="image/meal13.jpg" class="img-thumbnail
+		">
+		<h5>Food Name: Meat</h5>
+		<h5>Food Cost:160AF</h5>
+	</div>
+	<div class="d-flex flex-column bg-white">
+		<img src="image/meal14.jpg" class="img-thumbnail
+		">
+		<h5>Food Name: Meat</h5>
+		<h5>Food Cost:160AF</h5>
+	</div>
+	<div class="d-flex flex-column bg-white">
+		<img src="image/rice1.jpg" class="img-thumbnail
+		">
+		<h5>Food Name: Rice</h5>
+		<h5>Food Cost:160AF</h5>
+	</div>
+	<div class="d-flex flex-column bg-white">
+		<img src="image/rice2.jpg" class="img-thumbnail
+		">
+		<h5>Food Name: Rice</h5>
+		<h5>Food Cost:160AF</h5>
+	</div>
+	<div class="d-flex flex-column bg-white">
+		<img src="image/rice3.jpg" class="img-thumbnail
+		">
+		<h5>Food Name: Rice</h5>
+		<h5>Food Cost:160AF</h5>
+	</div>
+	<div class="d-flex flex-column bg-white">
+		<img src="image/rice4.jpg" class="img-thumbnail
+		">
+		<h5>Food Name: Rice</h5>
+		<h5>Food Cost:160AF</h5>
+	</div>
+	<div class="d-flex flex-column bg-white">
+		<img src="image/rice5.jpg" class="img-thumbnail
+		">
+		<h5>Food Name: Rice</h5>
+		<h5>Food Cost:160AF</h5>
+	</div>
+	<div class="d-flex flex-column bg-white">
+		<img src="image/rice6.jpg" class="img-thumbnail
+		">
+		<h5>Food Name: Rice</h5>
+		<h5>Food Cost:160AF</h5>
+	</div>
+	<div class="d-flex flex-column bg-white">
+		<img src="image/rice7.jpg" class="img-thumbnail
+		">
+		<h5>Food Name: Rice</h5>
+		<h5>Food Cost:160AF</h5>
+	</div>
+	<div class="d-flex flex-column bg-white">
+		<img src="image/rice8.jpg" class="img-thumbnail
+		">
+		<h5>Food Name: Rice</h5>
+		<h5>Food Cost:160AF</h5>
+	</div>
+	<div class="d-flex flex-column bg-white">
+		<img src="image/v1.jpg" class="img-thumbnail
+		">
+		<h5>Food Name: Vegitable</h5>
+		<h5>Food Cost:160AF</h5>
+	</div>
+	<div class="d-flex flex-column bg-white">
+		<img src="image/v2.jpg" class="img-thumbnail
+		">
+		<h5>Food Name: Vegitable</h5>
+		<h5>Food Cost:160AF</h5>
+	</div>
+	<div class="d-flex flex-column bg-white">
+		<img src="image/v3.jpg" class="img-thumbnail
+		">
+		<h5>Food Name: Vegitable</h5>
+		<h5>Food Cost:160AF</h5>
+	</div>
+	<div class="d-flex flex-column bg-white">
+		<img src="image/v4.jpg" class="img-thumbnail
+		">
+		<h5>Food Name: Vegitable</h5>
+		<h5>Food Cost:160AF</h5>
+	</div>
+	<div class="d-flex flex-column bg-white">
+		<img src="image/v5.jpg" class="img-thumbnail
+		">
+		<h5>Food Name: Vegitable</h5>
+		<h5>Food Cost:160AF</h5>
+	</div>
+	<div class="d-flex flex-column bg-white">
+		<img src="image/v6.jpg" class="img-thumbnail
+		">
+		<h5>Food Name: Vegitable</h5>
+		<h5>Food Cost:160AF</h5>
+	</div>
+	<div class="d-flex flex-column bg-white">
+		<img src="image/v7.jpg" class="img-thumbnail
+		">
+		<h5>Food Name: Vegitable</h5>
+		<h5>Food Cost:160AF</h5>
+	</div>
+	<div class="d-flex flex-column bg-white">
+		<img src="image/v8.jpg" class="img-thumbnail
+		">
+		<h5>Food Name: Vegitable</h5>
+		<h5>Food Cost:160AF</h5>
+	</div>
+</div>
+
+</div>
+</body>
+</html>
